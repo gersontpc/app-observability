@@ -1,0 +1,11 @@
+management:
+    endpoints:
+        web:
+            exposure:
+                include: [ "prometheus" ]
+    metrics:
+        distribution:
+            percentiles:
+                http:
+                    server:
+                        requests: 0.50,0.80,0.90,0.95,0.99
